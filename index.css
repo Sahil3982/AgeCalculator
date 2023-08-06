@@ -1,0 +1,101 @@
+/* Common styles for all screen sizes */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: rgb(20, 20, 52);
+    font-size: larger;
+    color: aliceblue;
+}
+
+.container {
+    width: min(40%, 28.12em);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.container * {
+    border: none;
+    outline: none;
+}
+
+.input-wrapper {
+    background-color: aliceblue;
+    padding: 1.87em 1.5em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0.93em 1.25em rgba(0, 0, 0, 0.3);
+    margin-bottom: 3.24em;
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1em; /* Add gap to create spacing between the input and button */
+}
+
+input,
+button {
+    font-weight: 600;
+    border-radius: 0.31em; /* Fixed: Add leading zero to the decimal value */
+}
+
+input {
+    background-color: #bac2df;
+    color: black;
+    padding: 1.2em 1.25em; /* Fixed: Remove the comma */
+    font-size: larger;
+}
+
+button {
+    color: #fff;
+    background-color: rgb(20, 20, 52);
+}
+
+.output-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.output-wrapper div {
+    height: 6.25em;
+    width: 6.25em;
+    background-color: #fff;
+    border-radius: 0.31em;
+    color: #080808;
+    display: grid;
+    place-items: center;
+    padding: 1.25em 0;
+    box-shadow: 0 0 0.93em 1.25em rgba(0, 0, 0, 0.3); /* Fixed: Add commas to rgba values */
+}
+
+span {
+    font-size: 0.87em;
+    font-weight: 600;
+}
+
+p {
+    font-size: 0.87em;
+    color: #080808;
+    font-weight: 600;
+}
+
+/* Media Query for Small Screens (Mobile) */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    .input-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .output-wrapper {
+        flex-direction: column;
+    }
+}
+
+/* Add more media queries for other screen sizes if needed */
